@@ -1,5 +1,5 @@
 export * from "./schema/course"
-export * from "./schema/courseAccess"
+export * from "./schema/userCourseAccess"
 export * from "./schema/courseProduct"
 export * from "./schema/courseSection"
 export * from "./schema/lessons"

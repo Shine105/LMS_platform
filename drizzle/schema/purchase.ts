@@ -1,7 +1,7 @@
 import { relations } from "drizzle-orm";
 import { pgTable, text, integer, pgEnum, timestamp, jsonb, uuid, } from "drizzle-orm/pg-core";
 import { createdAt, id, updatedAt } from "../schemaHelpers";
-import { UserCourseAccessTable } from "./courseAccess";
+import { UserCourseAccessTable } from "./userCourseAccess";
 import { json } from "stream/consumers";
 import { UserTable } from "./user";
 import { ProductTable } from "./product";
