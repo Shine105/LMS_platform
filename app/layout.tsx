@@ -8,6 +8,7 @@ import {
   // UserButton,
 } from '@clerk/nextjs'
 import './globals.css'
+import { Toaster } from '@/components/ui/sonner'
 
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
       <html lang="en">
         <body className='antialiased'>
           {children}
+          <Toaster /> 
         </body>
       </html>
     </ClerkProvider>

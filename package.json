@@ -13,6 +13,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.20.0",
+    "@hookform/resolvers": "^5.0.1",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@t3-oss/env-nextjs": "^0.13.4",
     "class-variance-authority": "^0.7.1",
@@ -20,12 +23,15 @@
     "drizzle-orm": "^0.43.1",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
+    "next-themes": "^0.4.6",
     "pg": "^8.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.4",
+    "sonner": "^2.0.3",
     "svix": "^1.66.0",
     "tailwind-merge": "^3.3.0",
-    "zod": "^3.25.23"
+    "zod": "^3.25.30"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
