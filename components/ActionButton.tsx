@@ -1,8 +1,11 @@
+"use client"
+
 import { ComponentPropsWithRef, ReactNode, useTransition } from "react";
 import { Button } from "./ui/button";
 import { actionToast } from "./ui/sonner";
 import { cn } from "@/lib/utils";
 import { Loader2Icon } from "lucide-react";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "./ui/alert-dialog";
 
 export function ActionButton({
     action,
@@ -20,6 +23,31 @@ export function ActionButton({
             actionToast({ actionData: data})
         })
     }
+
+    if (requireAreYouSure) {
+      return(
+        <AlertDialog open={isLoading ? true : undefined}>
+          <AlertDialogTrigger asChild>
+            <Button {...props} />
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>  Are you sure? </AlertDialogTitle>
+              <AlertDialogDescription>
+              This action cannot be undone.
+            </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction disabled={isLoading} onClick={performAction}>
+                <LoadingTextSwap isLoading={isLoading}>Yes</LoadingTextSwap>
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )
+    }
+
     return (
       <Button {...props} disabled={isLoading} onClick={performAction}>
         <LoadingTextSwap isLoading={isLoading}>

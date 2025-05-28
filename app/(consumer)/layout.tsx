@@ -44,7 +44,7 @@ function Navbar() {
             <Suspense>
                 <SignedOut>
                     <Button className="self-center" asChild>
-                        <SignInButton>Sign In</SignInButton>
+                        <SignInButton forceRedirectUrl="/post-signin">Sign In</SignInButton>
                     </Button>
                 </SignedOut>
             </Suspense>
