@@ -6,7 +6,6 @@ import { redirect } from "next/navigation"
 import { getCurrentUser } from "@/services/clerk"
 import { canCreateCourses, canDeleteCourses } from "../permissions/courses"
 import { insertCourse } from "../db/courses"
-import { error } from "console"
 
 export async function createCourse(unsafeData: z.infer<typeof courseSchema>){
     const { success, data} = courseSchema.safeParse(unsafeData)
